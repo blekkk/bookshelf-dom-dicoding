@@ -1,0 +1,159 @@
+:root {
+  --mainColor: #252a34;
+  --secondaryColor: #51555d27;
+  --textColor: #fff;
+  --buttonColor: #7289da;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+  background: var(--mainColor);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  color: var(--textColor);
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px #fff solid;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 1rem 0;
+}
+
+.wrapper .card {
+  width: 100%;
+  min-height: 10rem;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  background: var(--secondaryColor);
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+form {
+  width: 90%;
+  font-size: 1.25rem
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-group input{
+  padding: 8px;
+  font-size: 1.25rem;
+  border-radius: 6px;
+}
+
+.form-input-group input:focus{
+  outline: none;
+}
+
+#add-btn {
+  width: 100%;
+}
+
+#add-btn, .book-action-btn {
+  background: var(--buttonColor);
+  color: var(--textColor);
+  border-radius: 6px;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  border: none;
+  position: relative;
+}
+
+#add-btn:hover, .book-action-btn:hover{
+  background: #8195db;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookshelf {
+  padding: 0 2rem;
+  width: 100%;
+  
+}
+
+.book-on-shelf {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.219);
+  border-radius: 1rem;
+}
+
+.custom-dialog {
+  display: none;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background: var(--mainColor);
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgb(30, 255, 0);
+  animation: fade 0.3s;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background: #51555d27;
+  color: var(--textColor);
+  border-top: 1px solid #fff;
+}
+
+@keyframes fade {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .book-on-shelf {
+    flex-direction: column;
+  }
+}

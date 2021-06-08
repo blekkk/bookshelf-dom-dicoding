@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf DOM</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+  <header>
+    <h1>Bookshelf</h1>
+  </header>
+  <main>
+    <div class="wrapper">
+      <div class="card">
+        <h2>Input your books!</h2>
+        <form action="#" id="book-form">
+          <div class="form-input-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title-data" required>
+          </div>
+          <div class="form-input-group">
+            <label for="author">Author</label>
+            <input type="text" id="author-data">
+          </div>
+          <div class="form-input-group">
+            <label for="year">Year</label>
+            <input type="number" id="year-data">
+          </div>
+          <label for="">Completed</label>
+          <input type="checkbox" name="isComplete" id="isComplete-data">
+          <div>
+            <input type="submit" value="Add book" id="add-btn">
+          </div>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Search books</h2>
+        <form action="#" id="book-search-form">
+          <div class="form-input-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title-data-search" required>
+          </div>
+          <div>
+            <input type="submit" value="Search book" id="add-btn">
+          </div>
+        </form>
+        <div class="bookshelf" id="search-container">
+        </div>
+      </div>
+      <div class="card">
+        <h2>On-read</h2>
+        <div class="bookshelf" id="onread-container">
+        </div>
+      </div>
+      <div class="card">
+        <h2>Completed</h2>
+        <div class="bookshelf" id="completed-container">
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <span>&copy; 2021 Blek. Made for Dicoding Submission</span>
+  </footer>
+  
+  <script src="./assets/js/script..js"></script>
+</body>
+
+</html>
